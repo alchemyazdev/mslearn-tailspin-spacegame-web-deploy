@@ -1,6 +1,5 @@
 trigger:
 - '*'
-
 #-----Build Stage ---
 stages:
     - stage: 'Build'
@@ -62,7 +61,7 @@ stages:
     
         - publish: '$(Build.ArtifactStagingDirectory)'
           artifact: drop
-    #####-------------Deploy--------
+#####-------------Deploy--------
     - stage: 'Deploy'
       displayName: 'Deploy the web application'
       dependsOn: Build
